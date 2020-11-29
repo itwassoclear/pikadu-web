@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-  background: #4E6F62;
+  background: #4e6f62;
   padding-top: 16px;
   padding-bottom: 16px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
@@ -112,7 +112,12 @@ body {
 }
 
 .posts {
+  display: none;
   width: 67%;
+}
+
+.posts.visible {
+  display: block;
 }
 
 .post {
@@ -145,14 +150,19 @@ body {
 
 .tags {
   margin-bottom: 22px;
+  color: #bfbfbf;
 }
 
 .tag {
   color: #bfbfbf;
   font-size: 14px;
   line-height: 22px;
-  margin-right: 10px;
+  margin-left: 10px;
   text-decoration: none;
+}
+
+.tag:first-child {
+  margin-left: 0;
 }
 
 .post-footer {
@@ -203,6 +213,7 @@ body {
   height: 34px;
   margin-left: 9px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .author-username {
@@ -262,7 +273,7 @@ body {
 }
 
 .login-signin {
-  background-color: #4E6F62;
+  background-color: #4e6f62;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -282,7 +293,7 @@ body {
 }
 
 .login-signup {
-  color: #4E6F62;
+  color: #4e6f62;
   text-align: center;
   font-size: 14px;
   text-decoration: none;
@@ -356,7 +367,7 @@ body {
 }
 
 .edit-btn {
-  background-color: #4E6F62;
+  background-color: #4e6f62;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -409,11 +420,11 @@ body {
 
 .sidebar-menu-link.active {
   background-color: #fffbe6;
-  border-right: 3px solid #faad14;
+  border-right: 3px solid #4e6f62;
 }
 
 .button {
-  background: #faad14;
+  background: #4e6f62;
   border-radius: 4px;
   border: none;
   text-decoration: none;
@@ -447,6 +458,10 @@ body {
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+}
+
+.button-new-post.visible {
+  display: flex;
 }
 
 .icon-fire {
@@ -486,7 +501,7 @@ body {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  color: #d48806;
+  color: #4e6f62;
 }
 
 .card-text {
@@ -525,16 +540,23 @@ body {
 }
 
 .add-post {
-  display: flex;
+  display: none;
   flex-direction: column;
+  width: 67%;
+}
+
+.add-post.visible {
+  display: flex;
 }
 
 .add-title,
-.add-text {
+.add-text,
+.add-tags {
   background: #ffffff;
   border: 1px solid #e8e8e8;
   padding: 23px 30px;
   margin-bottom: 16px;
+  resize: none;
 }
 
 .add-text {
